@@ -1,0 +1,43 @@
+{
+  "manifest_version": 1,
+  "id": "firebase-notification",
+  "name": "Firebase-notification",
+  "short_name": "Firebase-notif",
+  "version": "0.0.1",
+  "description": "Send notify to firebase",
+  "homepage_url": "",
+  "license": "MPL-2.0",
+  "author": "Charles Da Silva Costa",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "strict_min_version": "0.10.0",
+      "strict_max_version": "*",
+      "primary_type": "adapter"
+    }
+  },
+  "options": {
+    "schema": {
+      "type": "object",
+      "required": [
+        "projectId",
+        "clientEmail",
+        "privateKey"
+      ],
+      "properties": {
+        "projectId": {
+          "type": "string",
+          "title": "Project ID"
+        },
+        "clientEmail": {
+          "type": "string",
+          "title": "Client Email"
+        },
+        "privateKey": {
+          "type": "string",
+          "title": "Private Key"
+        }
+      }
+    }
+  }
+}
