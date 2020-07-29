@@ -41,6 +41,10 @@
         "databaseURL": {
           "type": "string",
           "title": "Database URL"
+        },
+        "test": {
+          "type": "string",
+          "title": "test"
         }
       }
     }
