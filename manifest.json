@@ -22,7 +22,8 @@
       "required": [
         "projectId",
         "clientEmail",
-        "privateKey"
+        "privateKey",
+        "databaseURL"
       ],
       "properties": {
         "projectId": {
@@ -36,6 +37,10 @@
         "privateKey": {
           "type": "string",
           "title": "Private Key"
+        },
+        "databaseURL": {
+          "type": "string",
+          "title": "Database URL"
         }
       }
     }
