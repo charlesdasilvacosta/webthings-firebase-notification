@@ -56,4 +56,17 @@ declare module 'gateway-addon' {
         public loadConfig(): Promise<any>;
         public saveConfig(config: any): Promise<void>;
     }
+
+    class Notifier {
+        constructor(addonManager: any, id: string, packageName: string);
+        outlets: any;
+        public handleOutletAdded(outlet: any): void;
+        public handleOutletRemoved(outlet: any): void;
+    }
+
+    class Outlet {
+        constructor(notifier: Notifier, id: any);
+        public notify(title: string, message: string, level: number): Promise<any>;
+        name: string;
+    }
 }

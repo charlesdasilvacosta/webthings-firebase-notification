@@ -1,10 +1,9 @@
 
 
 import { FirebaseNotification } from './firebase-notification.adapter';
+import { FirebaseNotifier } from './firebase.notifier';
 
 export = async (addonManager: any, manifest: any) => {
-    // discover(addonManager, manifest);
-    // loadGatewayFromConfig(addonManager, manifest);
-
     await FirebaseNotification.initFirebaseNotification(addonManager, manifest);
+    new FirebaseNotifier(addonManager, manifest);
 };
